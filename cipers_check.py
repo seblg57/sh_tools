@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
 """
-IronSSLProbe - SSL/TLS Certificate and Cipher Suite Checker
+IronSSLProbe - SSL/TLS Certificate and Cipher Suite Checker for FQDN
 Author: Sebux
 Description:
     This script connects to a given hostname and port to retrieve and display SSL/TLS certificate details,
