@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#TC use only
 # Def
 SALT="401112740954257854"
 
