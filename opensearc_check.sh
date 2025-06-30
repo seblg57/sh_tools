@@ -1,4 +1,18 @@
 #!/bin/bash
+#
+# 🛡️ OpenSearch Diagnostic Tool
+# Author : Sebux 
+# Date   : 2025-06-30
+#
+# This script helps you quickly check OpenSearch cluster health,
+# pipelines, index docs, and node resource usage with optional SSL and auth.
+#
+# Usage:
+#   Run and answer prompts to customize checks.
+#
+# Have fun and keep it secure! 
+#
+
 
 clear
 echo "🛡️  OpenSearch Diagnostic Tool by Sebux"

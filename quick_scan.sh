@@ -1,4 +1,18 @@
 #!/bin/bash
+#
+# Minimal TCP Port Scanner
+# Author: Sebux
+# Description:
+#   Scan specified ports on a target host to check if they are open or closed.
+#   Supports single ports, comma-separated lists, and port ranges.
+# Usage:
+#   ./scanner.sh <host> <port|port1,port2,...|start-end>
+# Example:
+#   ./scanner.sh google.com 80
+#   ./scanner.sh 192.168.1.1 22,80,443
+#   ./scanner.sh example.com 79-81
+#
+
 function alarm {
   local timeout=$1; shift;
   # execute command, store PID
@@ -20,7 +34,6 @@ function scan {
 
   local host=$1
   local ports=()
-  # store user-provided ports in array
   case $2 in
     *-*)
       IFS=- read start end <<< "$2"
@@ -36,7 +49,6 @@ function scan {
       ;;
   esac
 
-  # attempt to write to each port, print open if successful, closed if not
   for port in "${ports[@]}"; do
     alarm 1 "echo >/dev/tcp/$host/$port" &&
       echo "$port/tcp open" ||
