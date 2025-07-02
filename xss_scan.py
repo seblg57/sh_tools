@@ -9,6 +9,8 @@ Description:
     vulnerabilities by injecting a test payload into a specified URL parameter.
     Not a full scanner, for quick checks only.
 
+Pour test
+
 Usage:
     python ironxssprobe.py
 
